@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/identify-check-api
+    username: postgres
+    password: admin
+  jpa:
+    defer-datasource-initialization: true
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: create
+  sql:
+    init:
+      mode: always
+logging:
+  level:
+    org:
+      springframework:
+        jdbc:
+          datasource:
+            init: off
